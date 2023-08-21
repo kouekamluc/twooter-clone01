@@ -54,6 +54,8 @@
                     <div class="col-6">
                             Following
                     </div>
+
+                   
                     {%  if user_profile != None %}
                         <div class="col-6">
                             <h3 class="white-important follow-click">
@@ -69,7 +71,9 @@
                                 </h3>
                             </a>
                         </div>
+                   
                     {% else %}
+                    
                         <div class="col-6">
                             <a href="{% url 'user-followers' user.username %}">
                                 <h3 class="white-important follow-click">
@@ -85,6 +89,7 @@
                                 </h3>
                             </div>
                         </a>
+                 
                     {%  endif %}
                 </div>
             </article>
@@ -290,7 +295,7 @@
 <a href="">Cookies</a>,
 <a href="">Ads info</a>,
 <a href="">More</a>
-© 2021 Twirrer, Inc.</p>
+© 2023 Twirrer, Inc.</p>
 
         </div>
     </div>

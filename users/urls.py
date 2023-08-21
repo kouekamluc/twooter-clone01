@@ -1,6 +1,7 @@
 from django.urls import path
 from django.contrib.auth import views as auth_views
 from users import views as users_views 
+from .views import UserCreateView
 
 
 urlpatterns = [
@@ -17,7 +18,7 @@ urlpatterns = [
     path('password-reset/confirm/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(
         template_name='users/password_reset_confirm.html'),
          name='password-reset-done'),
-    path('register/', users_views.register, name='register-users'),
+    path('register/', UserCreateView.as_view(), name='register-users'),
     path('profile/', users_views.profile, name='profile'),
     path('search/', users_views.SearchView, name='search'),
     
