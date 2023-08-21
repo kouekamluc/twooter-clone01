@@ -10,10 +10,10 @@ from django.urls import reverse
 
 class Post(models.Model):
     content = models.TextField(max_length=1000)
-    created_at = models.DateTimeField(auto_now_add=True )
+    date_posted= models.DateTimeField(auto_now_add=True )
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     likes = models.IntegerField(default=0)
-    dislike = models.IntegerField(default=0)
+    dislikes = models.IntegerField(default=0)
     
     def __str__(self):
         return self.content[:5]
@@ -28,7 +28,7 @@ class Post(models.Model):
 
 class Comment(models.Model):
     content = models.TextField(max_length=150)
-    created_date = models.DateTimeField(auto_now_add=True) 
+    date_posted = models.DateTimeField(auto_now_add=True) 
     author = models.ForeignKey(User , on_delete=models.CASCADE)
     post_connected = models.ForeignKey(Post , on_delete=models.CASCADE)
     
