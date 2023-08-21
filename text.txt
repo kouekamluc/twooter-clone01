@@ -1,0 +1,3 @@
+clinet id : 845773627966-ujpnrhfcq89a38h83akqo93d1uau8pdh.apps.googleusercontent.com
+
+client secret : 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
